@@ -3,10 +3,27 @@
     <head>
         <title>Canvas shit</title>
     </head>
+    <style>
+        .wrapper {
+            position: relative;
+        }
+        .wrapper canvas{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #img-canvas {
+            z-index: 0;
+        }
+        #drawing-canvas {
+            z-index: 1;
+        }
+    </style>
     <body>
-        <canvas id="base-canvas" width="1024" height="768">
-        Please use a browser that supports "canvas"
-        </canvas>
+        <div class="wrapper">
+            <canvas id="img-canvas" width="1024" height="768"></canvas>
+            <canvas id="drawing-canvas" width="1024" height="768"></canvas>
+        </div>
         <script src="jquery-3.3.1.js"></script>
         <script src="home.js"></script>
     </body>
